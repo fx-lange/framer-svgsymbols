@@ -34,9 +34,9 @@ class Slider extends SVGSymbol
 				tapX = e.point.x
 					
 				trackX = @.querySelector('#track').x.baseVal.value
-				console.log @.querySelector('#Group').transform.baseVal
-				# TODO: works only in chrome
-				groupX = @.querySelector('#Group').transform.baseVal[0].matrix.e
+				# works only in chrome
+				# groupX = @.querySelector('#Group').transform.baseVal[0].matrix.e
+				groupX = @.querySelector('#Group').transform.baseVal.getItem(0).matrix.e
 				trackWidth = @.querySelector('#track').width.baseVal.value
 
 				mappedValue = Utils.modulate tapX, [groupX + trackX, groupX + trackX+trackWidth], [@minValue, @maxValue], true
