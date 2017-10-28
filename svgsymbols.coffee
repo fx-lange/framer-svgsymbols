@@ -1,10 +1,12 @@
 class exports.SVGSymbol extends Layer
-    constructor: (options) ->
-        rawSVG = Utils.domLoadDataSync(options.svgPath)
+    constructor: (name, options={}) ->
+        path = 'svgsymbols/'+name+'.svgsymbol'
+        rawSVG = Utils.domLoadDataSync(path)
         rawSVG.search /viewBox/
         super _.defaults options,
             html: rawSVG
-
+            name: name
+            backgroundColor: 'transparent'
         
         if (!options.width? or !options.height?) and !options.size?
             SVG = @.querySelector 'svg'
