@@ -39,9 +39,7 @@ class Slider extends SVGSymbol
 		# document.addEventListener 'touchend', (event) -> event.preventDefault()
 		
 		@.on Events.MouseDown, (e) ->
-			# if e.path[0].id == 'track' //works only in chrome
-			if e.srcElement.id == 'track'
-				@isDragging = true
+			@isDragging = true
 
 		@.on Events.MouseMove, (e) =>
 			if @isDragging
