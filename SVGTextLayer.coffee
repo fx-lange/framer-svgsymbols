@@ -4,17 +4,17 @@ class exports.SVGTextLayer extends Layer
         rawSVG.search /viewBox/
         super _.defaults options,
             html: rawSVG
-            width: 400
-            height: 200
 
-        SVG = @.querySelector 'svg'
-        viewBox = SVG.getAttribute 'viewBox'
-        values = viewBox.split " "
         
-        if options.width?
+        if (!options.width? or !options.height?) and !options.size?
+            SVG = @.querySelector 'svg'
+            viewBox = SVG.getAttribute 'viewBox'
+            values = viewBox.split " "
             @width = parseInt values[2]
-        if options.height?
             @height = parseInt values[3]
+        else
+            @._updateWidth()
+            @._updateHeight()
 
     render: (options) ->
         keys = Object.keys options
@@ -22,3 +22,9 @@ class exports.SVGTextLayer extends Layer
             value = options[key]
             selector = '#'+key+ ' tspan'
             @.querySelector(selector).textContent = value
+            
+    _updateWidth: () ->
+        @.querySelector('svg').setAttribute 'width', @.width
+        
+    _updateHeight: () ->
+        @.querySelector('svg').setAttribute 'height', @.height
