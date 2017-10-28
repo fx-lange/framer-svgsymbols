@@ -1,6 +1,6 @@
-{SVGTextLayer} = require 'SVGTextLayer/SVGTextLayer'
+{SVGSymbol} = require 'svgtextlayers'
 
-layer = new SVGTextLayer
+layer = new SVGSymbol
     svgPath: 'svgs/Slider.svg'
     
 layer.render

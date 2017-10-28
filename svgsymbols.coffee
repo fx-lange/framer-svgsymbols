@@ -1,4 +1,4 @@
-class exports.SVGTextLayer extends Layer
+class exports.SVGSymbol extends Layer
     constructor: (options) ->
         rawSVG = Utils.domLoadDataSync(options.svgPath)
         rawSVG.search /viewBox/
