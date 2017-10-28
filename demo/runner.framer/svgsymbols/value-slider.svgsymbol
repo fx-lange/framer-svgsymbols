@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg width="375px" height="66px" viewBox="0 0 375 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>value-slider</title>
+  <desc>Created with sketch-svgsymbols</desc>
+  <defs>
+    <circle id="path-1" cx="9" cy="9" r="9"/>
+    <filter x="-33.3%" y="-33.3%" width="166.7%" height="166.7%" filterUnits="objectBoundingBox" id="filter-2">
+      <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+      <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"/>
+    </filter>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="value-slider">
+      <text id="value" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#333333">
+        <tspan x="317" y="37">355</tspan>
+      </text>
+      <g id="Group" transform="translate(21.000000, 24.000000)">
+        <rect id="track" fill="#E4E4E4" x="3" y="5" width="267" height="8" rx="4"/>
+        <g id="knob">
+          <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"/>
+          <use fill="#F5F5F5" fill-rule="evenodd" xlink:href="#path-1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
